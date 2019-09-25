@@ -15,7 +15,7 @@ sap.ui.define([
 			
 			
 			var itemModel = new sap.ui.model.json.JSONModel();
-			itemModel.setData(this.jsonModel.getData()[0].data.json);
+			itemModel.setData(this.jsonModel.getData());
 			this.getView().setModel(itemModel);
 		},
 		
