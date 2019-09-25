@@ -20,10 +20,10 @@ app.get("/liststreamkeys", function (req, res) {
 
 	var authOptions = {
 		method: 'POST',
-		url: 'https://maas-proxy.cfapps.us10.hana.ondemand.com/3ead9308-8c19-4d13-89e7-7e68b24968ce/rpc',
+		url: 'https://maas-proxy.cfapps.eu10.hana.ondemand.com/64086e73-2a5e-4fd9-9ec1-0d9d055c6844/rpc',
 		data: config,
 		headers: {
-			'apikey': 'xsnU5GB3qmwtaYpNboASjWkymy6eZA44r4PAqUHK7Ap9QxkdBWt82v3gFzSca2jx'
+			'apikey': '824DaDCbRpjkDNBz8dSUPxZGDDaEkX5sUFhCd2RzERfA47DUCGsVhvkKkJWdS6Mn'
 		},
 		json: true
 	};
@@ -46,10 +46,10 @@ app.get("/liststreamitems", function (req, res) {
 
 	var authOptions = {
 		method: 'POST',
-		url: 'https://maas-proxy.cfapps.us10.hana.ondemand.com/3ead9308-8c19-4d13-89e7-7e68b24968ce/rpc',
+		url: 'https://maas-proxy.cfapps.eu10.hana.ondemand.com/64086e73-2a5e-4fd9-9ec1-0d9d055c6844/rpc',
 		data: config,
 		headers: {
-			'apikey': 'xsnU5GB3qmwtaYpNboASjWkymy6eZA44r4PAqUHK7Ap9QxkdBWt82v3gFzSca2jx'
+			'apikey': '824DaDCbRpjkDNBz8dSUPxZGDDaEkX5sUFhCd2RzERfA47DUCGsVhvkKkJWdS6Mn'
 		},
 		json: true
 	};
