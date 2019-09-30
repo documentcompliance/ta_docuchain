@@ -9,6 +9,13 @@
       "source": "^/compliance-ui/(.*)$",
       "target": "$1",
       "localDir": "webapp"
-    }
+    },
+    {
+		"source": "^/docuchain/(.*)$",
+		"target": "$1",
+		"authenticationType": "none",
+		"destination": "ta_docuchain",
+		"csrfProtection": false
+	}
   ]
 }
