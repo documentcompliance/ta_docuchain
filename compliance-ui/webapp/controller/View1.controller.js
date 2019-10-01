@@ -15,9 +15,15 @@ sap.ui.define([
 			this.jsonModel = new sap.ui.model.json.JSONModel();
 			this.jsonModel.loadData("/docuchain/liststreamitems", null, false);
 			
+			this.stream2DataJsonModel = new sap.ui.model.json.JSONModel();
+			this.stream2DataJsonModel.loadData("/docuchain/liststreamitemsStream2", null, false);			
 			
 			var itemModel = new sap.ui.model.json.JSONModel();
-			itemModel.setData(this.jsonModel.getData());
+			if(this.stream2DataJsonModel.getData().length > 0) {
+				itemModel.setData(this.jsonModel.getData().concat(this.stream2DataJsonModel.getData()));
+			} else {
+				itemModel.setData(this.jsonModel.getData());
+			}
 			this.getView().setModel(itemModel);
 		},
 		

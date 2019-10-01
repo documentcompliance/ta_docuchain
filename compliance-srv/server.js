@@ -64,6 +64,32 @@ app.get("/liststreamitems", function (req, res) {
 		});
 });
 
+app.get("/liststreamitemsStream2", function (req, res) {
+	var config = {
+		"method": "liststreamitems",
+		"params": ["stream2"]
+	};
+
+	var authOptions = {
+		method: 'POST',
+		url: 'https://maas-proxy.cfapps.eu10.hana.ondemand.com/64086e73-2a5e-4fd9-9ec1-0d9d055c6844/rpc',
+		data: config,
+		headers: {
+			'apikey': '824DaDCbRpjkDNBz8dSUPxZGDDaEkX5sUFhCd2RzERfA47DUCGsVhvkKkJWdS6Mn'
+		},
+		json: true
+	};
+
+	axios(authOptions)
+		.then(response => {
+			// JSON responses are automatically parsed.
+			res.send(response.data.result);
+		})
+		.catch(e => {
+			res.send(e);
+		});
+});
+
 http.listen(process.env.PORT || port, function () {
 	console.log("[index.js] Server Up - " + host + ":" + port);
 });

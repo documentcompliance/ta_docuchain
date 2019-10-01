@@ -5,7 +5,7 @@ sap.ui.define([], function () {
 
 		transactionStatusDisplayColorScheme : function (streamId) {
 			var colorScheme;
-			if(streamId === "ganesh.namasivaya@sap.com") { 
+			if(streamId !== "stream2") { 
 				colorScheme = 8;
 			} else {
 				colorScheme = 3;
@@ -14,7 +14,7 @@ sap.ui.define([], function () {
 		}, 
 		transactionStatus : function (streamId) {
 			var sStatus;
-			if(streamId === "ganesh.namasivaya@sap.com") { 
+			if(streamId !== "stream2") { 
 				sStatus = "Verified";
 			} else {
 				sStatus = "Rejected";

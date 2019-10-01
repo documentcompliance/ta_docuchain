@@ -50,7 +50,7 @@
 														<Text text="{data/json/INVOICE_HEADER/0/NETWR}"/>
 														<Text text="{data/json/INVOICE_HEADER/0/MWSBK}"/>
 														<!--<ObjectStatus text="Registered" inverted="true" state="Success"></ObjectStatus>-->
-														<tnt:InfoLabel text="{path: 'data/json/MAIL_ADDR/0/EMAIL', formatter: '.formatter.transactionStatus' }" colorScheme="{path: 'data/json/MAIL_ADDR/0/EMAIL', formatter: '.formatter.transactionStatusDisplayColorScheme' }" displayOnly= "true"/>
+														<tnt:InfoLabel text="{path: 'data/json/DATA_STREAM/0/STREAM', formatter: '.formatter.transactionStatus' }" colorScheme="{path: 'data/json/DATA_STREAM/0/STREAM', formatter: '.formatter.transactionStatusDisplayColorScheme' }" displayOnly= "true"/>
 													</cells>
 												</ColumnListItem>
 											</items>
