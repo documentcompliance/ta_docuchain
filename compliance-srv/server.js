@@ -41,7 +41,7 @@ app.get("/liststreamkeys", function (req, res) {
 app.get("/liststreamitems", function (req, res) {
 	var config = {
 		"method": "liststreamitems",
-		"params": ["stream1"]
+		"params": ["stream1", false, 1000]
 	};
 
 	var authOptions = {
@@ -67,7 +67,7 @@ app.get("/liststreamitems", function (req, res) {
 app.get("/liststreamitemsStream2", function (req, res) {
 	var config = {
 		"method": "liststreamitems",
-		"params": ["stream2"]
+		"params": ["stream2", false, 1000]
 	};
 
 	var authOptions = {

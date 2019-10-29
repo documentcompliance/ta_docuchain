@@ -4,6 +4,15 @@
 		<App id="app">
 			<pages>
 				<Page title="Tax Authority - eDocuments Compliance Cockpit">
+				<f:ShellBar
+					homeIcon="https://freepngimg.com/thumb/machine/57172-3-government-free-download-png-hd.png"
+					showCopilot="true"
+					showSearch="false"
+					showMenuButton="false"
+					showNotifications="true"
+					notificationsNumber="48"
+					showProductSwitcher="true">
+				</f:ShellBar>					
 					<content>
 						<f:GridContainer id="demoGrid" class="sapUiSmallMargin" inlineBlockLayout="true">
 							<f:items>
@@ -12,15 +21,15 @@
 										<f:GridContainerItemLayoutData columns="15"/>
 									</f:layoutData>
 									<f:content>
-										<Table inset="false" items="{ path: '/' }">
+										<Table id="idTable" inset="false" items="{ path: '/' }">
 											<layoutData>
 												<f:GridContainerItemLayoutData minRows="2" columns="2"/>
 											</layoutData>
-											<headerToolbar>
-												<Toolbar>
-													<Title text="Tax Compliance Report"/>
-												</Toolbar>
-											</headerToolbar>
+											<!--<headerToolbar>-->
+											<!--	<Toolbar>-->
+													<!--<Title text="Tax Compliance Report"/>-->
+											<!--	</Toolbar>-->
+											<!--</headerToolbar>-->
 											<columns>
 												<Column width="12em">
 													<Text text="Seller Party"/>
@@ -28,6 +37,9 @@
 												<Column width="12em">
 													<Text text="Buyer Party"/>
 												</Column>
+												<Column width="12em">
+													<Text text="Transaction Date Time"/>
+												</Column>												
 												<Column width="12em">
 													<Text text="Invoice Number"/>
 												</Column>
@@ -46,6 +58,7 @@
 													<cells>
 														<Text text="{data/json/SENDER/0/NAME}"/>
 														<Text text="{data/json/RECEIVER/0/NAME}"/>
+														<Text text="{path: 'blocktime', formatter: '.formatter.blocktimeDisplay' }"/>
 														<Text text="{data/json/INVOICE_HEADER/0/VBELN}"/>
 														<Text text="{data/json/INVOICE_HEADER/0/NETWR}"/>
 														<Text text="{data/json/INVOICE_HEADER/0/MWSBK}"/>

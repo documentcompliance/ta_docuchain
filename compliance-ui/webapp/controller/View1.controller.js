@@ -24,8 +24,20 @@ sap.ui.define([
 			} else {
 				itemModel.setData(this.jsonModel.getData());
 			}
+
+			var documentData = itemModel.getData();
+			documentData = this.getSortedData(itemModel.getData(), "blocktime", false);
+			itemModel.setData(documentData);
+			this.byId("idTable").setHeaderText("Tax Compliance Report - Documents (" + itemModel.getData().length + ")");
+			
 			this.getView().setModel(itemModel);
 		},
+		
+		getSortedData: function (data, prop, isAsc) {
+		    return data.sort((a, b) => {
+		        return (a[prop] < b[prop] ? -1 : 1) * (isAsc ? 1 : -1)
+		    });
+		},			
 		
 		onSelectInvoiceId: function(oEvent){
 			var dataToFilter = this.jsonModel.getData();
